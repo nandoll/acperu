@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Presentacion", "01-Presentacion", "{AA079ACF-1A58-4F42-9B05-4756A1388D4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Logica", "02-Logica", "{57B31FC9-274D-4502-978E-82712A59524F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Modelo", "03-Modelo", "{C67171BA-CCD9-44C2-AB48-AABFC4313EB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Datos", "04-Datos", "{91430C93-A369-4D2F-97AC-640A6C9D65C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Consciencia.Logica", "02-Logica\UPC.Consciencia.Logica\UPC.Consciencia.Logica.csproj", "{7B2B93D3-25F4-4533-B6A4-38BE63E637F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Consciencia.Modelo", "03-Modelo\UPC.Consciencia.Modelo\UPC.Consciencia.Modelo.csproj", "{CC5F3CE0-9212-402C-84A1-29961BD4BD1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Consciencia.Datos", "04-Datos\UPC.Consciencia.Datos\UPC.Consciencia.Datos.csproj", "{7152A7C5-5ABD-488C-B7E0-312891AA9BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Consciencia.SiteWeb", "01-Presentacion\UPC.Consciencia.SiteWeb\UPC.Consciencia.SiteWeb.csproj", "{4646E734-9380-43F6-9963-89D9E6CD2D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Pruebas", "05-Pruebas", "{C4AA6DD9-E183-41A9-B0BD-F82125453CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Consciencia.Pruebas", "05-Pruebas\UPC.Consciencia.Pruebas\UPC.Consciencia.Pruebas.csproj", "{56E0195C-47AF-4447-9808-088176FCC36C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E} = {4646E734-9380-43F6-9963-89D9E6CD2D1E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B2B93D3-25F4-4533-B6A4-38BE63E637F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2B93D3-25F4-4533-B6A4-38BE63E637F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2B93D3-25F4-4533-B6A4-38BE63E637F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2B93D3-25F4-4533-B6A4-38BE63E637F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5F3CE0-9212-402C-84A1-29961BD4BD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5F3CE0-9212-402C-84A1-29961BD4BD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5F3CE0-9212-402C-84A1-29961BD4BD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5F3CE0-9212-402C-84A1-29961BD4BD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7152A7C5-5ABD-488C-B7E0-312891AA9BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7152A7C5-5ABD-488C-B7E0-312891AA9BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7152A7C5-5ABD-488C-B7E0-312891AA9BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7152A7C5-5ABD-488C-B7E0-312891AA9BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E0195C-47AF-4447-9808-088176FCC36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E0195C-47AF-4447-9808-088176FCC36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E0195C-47AF-4447-9808-088176FCC36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E0195C-47AF-4447-9808-088176FCC36C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B2B93D3-25F4-4533-B6A4-38BE63E637F4} = {57B31FC9-274D-4502-978E-82712A59524F}
+		{CC5F3CE0-9212-402C-84A1-29961BD4BD1D} = {C67171BA-CCD9-44C2-AB48-AABFC4313EB3}
+		{7152A7C5-5ABD-488C-B7E0-312891AA9BC5} = {91430C93-A369-4D2F-97AC-640A6C9D65C9}
+		{4646E734-9380-43F6-9963-89D9E6CD2D1E} = {AA079ACF-1A58-4F42-9B05-4756A1388D4F}
+		{56E0195C-47AF-4447-9808-088176FCC36C} = {C4AA6DD9-E183-41A9-B0BD-F82125453CA1}
+	EndGlobalSection
+EndGlobal

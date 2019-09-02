@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Noticia" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4822/WebServices/Comunidad/Servicio/Noticia.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4822/WebServices/Comunidad/Servicio/Noticia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4822/WebServices/Comunidad/Servicio/Noticia.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INoticia_GrabarNoticia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GrabarNoticia" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_GrabarNoticia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GrabarNoticiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_ListarCatalogoNoticiaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCatalogoNoticiaPorId" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_ListarCatalogoNoticiaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCatalogoNoticiaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_ListarCatalogoNoticia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCatalogoNoticia" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_ListarCatalogoNoticia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCatalogoNoticiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_CambiarSituacionCatalogoNoticia_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarSituacionCatalogoNoticia" />
+  </wsdl:message>
+  <wsdl:message name="INoticia_CambiarSituacionCatalogoNoticia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarSituacionCatalogoNoticiaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INoticia">
+    <wsdl:operation name="GrabarNoticia">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoticia/GrabarNoticia" message="tns:INoticia_GrabarNoticia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoticia/GrabarNoticiaResponse" message="tns:INoticia_GrabarNoticia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCatalogoNoticiaPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoticia/ListarCatalogoNoticiaPorId" message="tns:INoticia_ListarCatalogoNoticiaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoticia/ListarCatalogoNoticiaPorIdResponse" message="tns:INoticia_ListarCatalogoNoticiaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCatalogoNoticia">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoticia/ListarCatalogoNoticia" message="tns:INoticia_ListarCatalogoNoticia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoticia/ListarCatalogoNoticiaResponse" message="tns:INoticia_ListarCatalogoNoticia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarSituacionCatalogoNoticia">
+      <wsdl:input wsaw:Action="http://tempuri.org/INoticia/CambiarSituacionCatalogoNoticia" message="tns:INoticia_CambiarSituacionCatalogoNoticia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INoticia/CambiarSituacionCatalogoNoticiaResponse" message="tns:INoticia_CambiarSituacionCatalogoNoticia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INoticia" type="tns:INoticia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GrabarNoticia">
+      <soap:operation soapAction="http://tempuri.org/INoticia/GrabarNoticia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCatalogoNoticiaPorId">
+      <soap:operation soapAction="http://tempuri.org/INoticia/ListarCatalogoNoticiaPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCatalogoNoticia">
+      <soap:operation soapAction="http://tempuri.org/INoticia/ListarCatalogoNoticia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarSituacionCatalogoNoticia">
+      <soap:operation soapAction="http://tempuri.org/INoticia/CambiarSituacionCatalogoNoticia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Noticia">
+    <wsdl:port name="BasicHttpBinding_INoticia" binding="tns:BasicHttpBinding_INoticia">
+      <soap:address location="http://localhost:4822/WebServices/Comunidad/Servicio/Noticia.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

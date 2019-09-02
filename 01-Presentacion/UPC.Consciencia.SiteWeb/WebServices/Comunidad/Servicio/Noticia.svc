@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="UPC.Consciencia.SiteWeb.WebServices.Comunidad.Servicio.Noticia" CodeBehind="Noticia.svc.cs" %>

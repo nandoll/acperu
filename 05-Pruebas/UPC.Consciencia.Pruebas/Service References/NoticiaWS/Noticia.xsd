@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:4822/WebServices/Comunidad/Servicio/Noticia.svc?xsd=xsd2" />
+  <xs:element name="GrabarNoticia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Noticia" nillable="true" type="ArrayOfCatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarNoticiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GrabarNoticiaResult" nillable="true" type="ArrayOfCatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCatalogoNoticiaPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intIdNoticia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCatalogoNoticiaPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListarCatalogoNoticiaPorIdResult" nillable="true" type="CatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCatalogoNoticia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ent" nillable="true" type="CatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarCatalogoNoticiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListarCatalogoNoticiaResult" nillable="true" type="ArrayOfCatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarSituacionCatalogoNoticia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intIdNoticia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarSituacionCatalogoNoticiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarSituacionCatalogoNoticiaResult" nillable="true" type="CatalogoNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
