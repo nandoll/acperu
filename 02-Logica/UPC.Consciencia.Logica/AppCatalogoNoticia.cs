@@ -68,7 +68,7 @@ namespace UPC.Consciencia.Logica
             DataTable dtCatalogo = obj.ListarCatalogoNoticia(ent);
             List<ENT.CatalogoNoticia> listaCatalogo = new List<ENT.CatalogoNoticia>();
 
-            foreach(DataRow drCatalogo in dtCatalogo.Rows)
+            foreach (DataRow drCatalogo in dtCatalogo.Rows)
             {
                 ENT.CatalogoNoticia entCatalogo = new ENT.CatalogoNoticia();
 
@@ -111,6 +111,43 @@ namespace UPC.Consciencia.Logica
         {
             DA.CatalogoNoticia obj = new DA.CatalogoNoticia(base.Conexion);
             return obj.CambiarSituacionCatalogoNoticia(intIdNoticia);
+        }
+
+        /// <summary>
+        /// Registra o actualiza un registro de la tabla.
+        /// </summary>
+        /// <param name="ent">Entidad que representa la tabla. </param>
+        /// <returns>Valor de exito.</returns>
+        /// <remarks></remarks>
+        public List<ENT.CatalogoNoticia> GrabarNoticia(List<ENT.CatalogoNoticia> Noticia)
+        {
+            DA.CatalogoNoticia obj = new DA.CatalogoNoticia(base.Conexion);
+            List<ENT.CatalogoNoticia> entResponse = new List<ENT.CatalogoNoticia>();
+            Int32 intIdNoticia = 0;
+
+            if (Noticia == null)
+            {
+                return entResponse;
+            }
+
+            foreach (ENT.CatalogoNoticia entNoticia in Noticia)
+            {
+                entNoticia.SituacionRegistro = "A";
+                entNoticia.UsuarioRegistro = "WS";
+                entNoticia.FechaRegistro = DateTime.Now;
+                entNoticia.UsuarioCambio = "WS";
+                entNoticia.FechaCambio = DateTime.Now;
+
+                intIdNoticia = obj.GrabarCatalogoNoticia(entNoticia);
+
+                if (intIdNoticia > 0)
+                {
+                    entResponse.Add(this.ListarCatalogoNoticiaPorId(intIdNoticia));
+                }
+
+            }
+
+            return entResponse;
         }
 
     }

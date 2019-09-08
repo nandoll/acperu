@@ -16,13 +16,13 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-sm-1">
-                            <a href="#" class="btn btn-primary btn-circle btn-lg">
+                            <a href="EjecutarCaso.aspx" class="btn btn-primary btn-circle btn-lg">
                                 <i class="fas fa-play"></i>
                             </a>
                         </div>
                         <div class="col-sm-7">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Caso:</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrech</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrecht</div>
                         </div>
                         <div class="col-sm-4">
                             <i class="fas fa-star fa-2x text-gray-300"></i>
@@ -43,13 +43,13 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-sm-1">
-                            <a href="#" class="btn btn-primary btn-circle btn-lg">
+                            <a href="EjecutarCaso.aspx" class="btn btn-primary btn-circle btn-lg">
                                 <i class="fas fa-play"></i>
                             </a>
                         </div>
                         <div class="col-sm-7">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Caso:</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrech</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrecht</div>
                         </div>
                         <div class="col-sm-4">
                             <i class="fas fa-star fa-2x text-gray-300"></i>
@@ -70,13 +70,13 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-sm-1">
-                            <a href="#" class="btn btn-primary btn-circle btn-lg">
+                            <a href="EjecutarCaso.aspx" class="btn btn-primary btn-circle btn-lg">
                                 <i class="fas fa-play"></i>
                             </a>
                         </div>
                         <div class="col-sm-7">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Caso:</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrech</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Odebrecht</div>
                         </div>
                         <div class="col-sm-4">
                             <i class="far fa-star fa-2x text-gray-300"></i>

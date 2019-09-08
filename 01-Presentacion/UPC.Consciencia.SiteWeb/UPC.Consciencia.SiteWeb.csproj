@@ -143,8 +143,10 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Comunidad\Noticia.aspx" />
+    <Content Include="Content\imgOdebrecht.png" />
     <Content Include="Default.aspx" />
     <Content Include="Educativo\CategoriaCasos.aspx" />
+    <Content Include="Educativo\EjecutarCaso.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Utilitarios\bootstrap\js\bootstrap.bundle.js" />
@@ -1921,6 +1923,13 @@
     <Compile Include="Educativo\CategoriaCasos.aspx.designer.cs">
       <DependentUpon>CategoriaCasos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Educativo\EjecutarCaso.aspx.cs">
+      <DependentUpon>EjecutarCaso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educativo\EjecutarCaso.aspx.designer.cs">
+      <DependentUpon>EjecutarCaso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebServices\Comunidad\Servicio\INoticia.cs" />
     <Compile Include="WebServices\Comunidad\Servicio\Noticia.svc.cs">
       <DependentUpon>Noticia.svc</DependentUpon>
@@ -1948,7 +1957,6 @@
     <Folder Include="App_ErrorPages\" />
     <Folder Include="App_Image\" />
     <Folder Include="App_Log\" />
-    <Folder Include="Content\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>

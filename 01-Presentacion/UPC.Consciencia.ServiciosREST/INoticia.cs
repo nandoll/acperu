@@ -4,16 +4,15 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using ENT = UPC.Consciencia.Modelo;
 
-namespace UPC.Consciencia.SiteWeb.WebServices.Comunidad.Servicio
+namespace UPC.Consciencia.ServiciosREST
 {
 
-    //[ServiceContract(Namespace = "http://upc.svc/Service/")]
     [ServiceContract()]
     public interface INoticia
     {
 
-        [OperationContract(Name = "GrabarNoticia")]
-        [WebInvoke()]
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/GrabarNoticia", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<ENT.CatalogoNoticia> GrabarNoticia(List<ENT.CatalogoNoticia> Noticia);
 
         /// <summary>
@@ -22,8 +21,8 @@ namespace UPC.Consciencia.SiteWeb.WebServices.Comunidad.Servicio
         /// <param name="intIdNoticia"></param>
         /// <returns></returns>
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "ListarCatalogoNoticiaPorId/{intIdNoticia}", ResponseFormat = WebMessageFormat.Json)]
-        ENT.CatalogoNoticia ListarCatalogoNoticiaPorId(Int32 intIdNoticia);
+        [WebGet(UriTemplate = "/ListarCatalogoNoticiaPorId/{intIdNoticia}", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ENT.CatalogoNoticia ListarCatalogoNoticiaPorId(string intIdNoticia);
 
         /// <summary>
         /// Obtiene los registro de la tabla.
@@ -40,15 +39,10 @@ namespace UPC.Consciencia.SiteWeb.WebServices.Comunidad.Servicio
         /// <param name="intIdNoticia">Código identificador de la tabla. </param>
         /// <returns>Valor de exito.</returns>
         /// <remarks></remarks>
-        [OperationContract(Name = "CambiarSituacionCatalogoNoticia")]
-        [WebInvoke()]
-        ENT.CatalogoNoticia CambiarSituacionCatalogoNoticia(Int32 intIdNoticia);
+        [OperationContract()]
+        [WebInvoke(UriTemplate = "/CambiarSituacionCatalogoNoticia", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ENT.CatalogoNoticia CambiarSituacionCatalogoNoticia(string intIdNoticia);
 
-        [OperationContract]
-        //[WebInvoke(UriTemplate = "/LitarNoticia", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        [WebGet(UriTemplate = "/ListarNoticia", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        ENT.CatalogoNoticia LitarNoticia();
-        //Method = "PUT"
     }
 
 }
