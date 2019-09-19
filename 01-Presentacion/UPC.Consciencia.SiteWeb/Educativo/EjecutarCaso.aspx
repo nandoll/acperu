@@ -4,118 +4,87 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
 
-<!-- PERCENT LOADER START-->
-    	<div id="mainLoader"><img src="../Utilitarios/assets/loader.png" /><br><span>0</span></div>
-        <!-- PERCENT LOADER END-->
-        
-        <!-- CONTENT START-->
-        <div id="mainHolder">
-        	<div id="option" class="fitImg">
-            	<div id="buttonOption" class="buttonClick buttonIcon buttonOptionOff"><img class="optionOff" alt="Begin" src="../Utilitarios/assets/button_option_close.png" /><img class="optionOn" alt="Begin" src="../Utilitarios/assets/button_option.png" /></div>
-                <div id="optionList" style="display:none;">
-                	<div id="buttonFullscreen" class="buttonClick buttonIcon buttonFullscreen"><img alt="Begin" src="../Utilitarios/assets/button_fullscreen.png" /></div>
-                    <div id="buttonSound" class="buttonClick buttonIcon buttonSound buttonSoundOn"><img class="soundOff" alt="Begin" src="../Utilitarios/assets/button_sound_off.png" /><img class="soundOn" alt="Begin" src="../Utilitarios/assets/button_sound_on.png" /></div>
-                	<div id="buttonExit" class="buttonClick buttonIcon buttonExit"><img alt="Begin" src="../Utilitarios/assets/button_exit.png" /></div>
-                    
-                </div>
-            </div>
-            
-            <div id="logoHolder">
-            	<div class="mainContent fitImg">
-                	<div class="logo"><img src="../Utilitarios/assets/logo.png"/></div>
-                    <div class="preloadText fontPreload resizeFont"></div>
-            		<div id="buttonStart" class="startImg buttonClick"><img src="../Utilitarios/assets/button_start.png"/></div>
-                </div>
-            </div>
-            
-            <div id="confirmHolder" class="overlayBg">
-            	<div class="confirmContent">
-                	<div class="message fontMessage resizeFont ignorePadding" data-fontSize="30" data-lineHeight="30">Deseas salir de ACPeru?</div>
-            		<div id="buttonOk" class="okImg buttonClick fitImg"><img src="../Utilitarios/assets/button_ok.png"/></div>
-                	<div id="buttonCancel" class="cancelImg buttonClick fitImg"><img src="../Utilitarios/assets/button_cancel.png"/></div>
-                </div>
-            </div>
-            
-            <div id="categoryHolder">
-            	<div class="categoryContent fitImg">
-                	<div id="buttonNextCat" class="nextImg buttonClick fitImg"><img src="../Utilitarios/assets/button_next.png"/></div>
-                    <div id="buttonPrevCat" class="prevImg buttonClick fitImg"><img src="../Utilitarios/assets/button_prev.png"/></div>
-                	<ul id="categoryList"></ul>
-                </div>
-            </div>
-            
-            <div id="gameHolder">
-            	<div id="gameStatus" class="fitImg">
-                	<div class="gameTotal fontStatus">
-                    	<div class="gameQuestionStatus resizeFont" data-fontSize="30" data-lineHeight="30">1/18</div>
-                        <img class="soundOn" alt="Begin" src="../Utilitarios/assets/item_question.png" />
-                    </div>
-                    <div class="gameTimer fontStatus">
-                    	<div class="gameTimerStatus resizeFont" data-fontSize="30" data-lineHeight="30">35</div>
-                        <img class="soundOn" alt="Begin" src="../Utilitarios/assets/item_timer.png" />
-                    </div>
-                </div>
-                
-                <div id="questionLoaderHolder">
-                	
-                </div>
-                
-            	<div id="questionHolder">
-                	<div class="questionText fontQuestion">lorem<br/>lorem</div>
-                </div>
-                
-                <div id="questionResultHolder">
-                	<div id="explanationHolder"></div>
-                    <div class="questionResultText fontCorrectWrong"></div>
-                    <div id="buttonNextQues" class="nextImg fontCorrectWrong buttonClick fitImg"><img src="../Utilitarios/assets/button_next.png"/></div>
-                    <div id="buttonPreviewQues" class="previewImg fontCorrectWrong buttonClick fitImg"><img src="../Utilitarios/assets/button_preview.png"/></div>
-                </div>
-            </div>
-            
-            <div id="resultHolder">
-            	<div class="resultExtra overlayBg fitImg">
-                    <div class="submitContent">
-                        <div class="fontSubmitTitle resizeFont submitTitle" data-fontSize="50" data-lineHeight="50"></div>
-                        <div class="fontLabel label resizeFont">Nombre:</div>
-                        <input id="uName" name="uName" type="text" class="fontInput resizeFont">
-                        <div class="fontLabel label resizeFont">Email:</div>
-                        <input id="uEmail" name="uEmail" type="text" class="fontInput resizeFont">
-                        <div class="action">
-                        	<div id="buttonSubmit" class="buttonSubmit buttonClick"><img src="../Utilitarios/assets/button_submit.png"/></div>
-                            <div id="buttonCancelSubmit" class="buttonCancelSubmit buttonClick"><img src="../Utilitarios/assets/button_cancel.png"/></div>
-                        </div>
-                    </div>
-                    <div class="scoreContent">
-                        <div class="fontScoreTitle resizeFont scoreTitle" data-fontSize="50" data-lineHeight="50"></div>
-                        <ul class="scoreList">
-                        	
-                        </ul>
-                        <div id="buttonBack" class="buttonBack buttonClick"><img src="../Utilitarios/assets/button_back.png"/></div>
-                    </div>
-                </div>
-                
-            	<div class="resultContent fitImg">
-                	<div class='itemWinnerCup'><img src="../Utilitarios/assets/item_cup.png" /></div>
-                    
-                    <div id='resultScore' class="fontResultScore fontScore resizeFont" data-fontSize="50" data-lineHeight="50">100</div>
-                    <div class="option singleOption">
-                        <ul>
-                            <li id="buttonReplay" class="buttonClick fitImg"><img alt="Replay" src="../Utilitarios/assets/button_replay.png" /></li>
-                            <li id="buttonSave" class="buttonClick fitImg"><img alt="Replay" src="../Utilitarios/assets/button_save.png" /></li>
-                            <li id="buttonScore" class="buttonClick fitImg"><img alt="Replay" src="../Utilitarios/assets/button_score.png" /></li>
-                        </ul>
-                    </div>
-                    <div id="shareOption" class="share">
-                        <div class="fontShare resizeFont" data-fontSize="30" data-lineHeight="30">Comparte tu puntaje</div>
-                        <ul>
-                            <li id="buttonFacebook" class="buttonClick fitImg"><img alt="Facebook" src="../Utilitarios/assets/button_facebook.png" /></li>
-                            <li id="buttonTwitter" class="buttonClick fitImg"><img alt="Twitter" src="../Utilitarios/assets/button_twitter.png" /></li>
-                            <li id="buttonGoogle" class="buttonClick fitImg"><img alt="Google" src="../Utilitarios/assets/button_google.png" /></li>
-                        </ul>
-                    </div>
+    <div class="col-sm-12">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Caso: Odebrecht</h1>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <center>
+            <%-- --%>
+            <%--<iframe width="560" height="315" src="https://www.youtube.com/watch?v=MmQSuSawMHE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+
+            </iframe>--%>
+            <iframe class="col-lg-8 col-sm-12" height="315" src="https://www.youtube.com/embed/MmQSuSawMHE" frameborder="0" allow="autoplay" allowfullscreen >
+
+            </iframe>
+            <%--<img src="../Content/imgOdebrecht.png" alt="" />--%>
+        </center>
+    </div>
+    <div class="col-lg-12">
+
+        <div class="card shadow mb-4 border-left-info">
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">1.- ¿COMO DENOMINO LA PRENSA INTERNACIONAL A LA CONFESION QUE HIZO MARCELO ODEBRETCH?</h6>
+            </a>
+            <div class="collapse show" id="collapseCardExample" style="">
+                <div class="card-body">
+                    <input type="radio" id="prg1" value="asd" name="rbprg1" />a- LA CONFESION CAOTICA
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg1" />b- LA CONFESION DEL ESCANDALO
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg1" />c- LA CONFESION DEL FIN DEL MUNDO
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg1" />d- LA CONFESION DE LOS BRASILEÑOS
                 </div>
             </div>
         </div>
-        <!-- CONTENT END-->
 
+        <div class="card shadow mb-4 border-left-info">
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">2.- ¿CUAL ES EL NEGOCIO PRINCIPAL DE ODEBRETCH?</h6>
+            </a>
+            <div class="collapse show" id="collapseCardExample" style="">
+                <div class="card-body">
+                    <input type="radio" id="prg1" value="asd" name="rbprg2" />a- LA AGRICULTORA
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg2" />b- CONSTRUCCION
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg2" />c- PESCA
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg2" />d- VENTA DE INMUEBLES
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow mb-4 border-left-info">
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">3.- ¿COMO CORRUMPIO ODEBRETCH A LOS JEFES DE ESTADOS?</h6>
+            </a>
+            <div class="collapse show" id="collapseCardExample" style="">
+                <div class="card-body">
+                    <input type="radio" id="prg1" value="asd" name="rbprg3" />a- A TRAVES DE PUBLICIDAD
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg3" />b- CON PROYECTOS SOCIALES
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg3" />c- OFRECIENDO SOBORNOS POR LICITACIONES DE CONSTRUCCIONES IMPORTANTES
+                    <br />
+                    <input type="radio" id="prg1" value="asd" name="rbprg3" />d- OFRECIENDO DESARROLLO E INVESTIGACION A LAS UNIVERSIDADES DEL PAIS
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-12">
+        <center>
+            <a href="CategoriaCasos.aspx" class="btn btn-success btn-circle btn-lg" title="Guardar">
+                    <i class="fas fa-check"></i>
+            </a>
+            <a href="CategoriaCasos.aspx" class="btn btn-danger btn-circle btn-lg" title="Cancelar">
+                    <i class="fas fa-trash"></i>
+                  </a>
+        </center>
+    </div>
 </asp:Content>
