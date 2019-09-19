@@ -25,6 +25,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1916,6 +1917,13 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Comunidad\Noticia.aspx.cs">
+      <DependentUpon>Noticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comunidad\Noticia.aspx.designer.cs">
+      <DependentUpon>Noticia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Educativo\CategoriaCasos.aspx.cs">
       <DependentUpon>CategoriaCasos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1935,10 +1943,6 @@
       <DependentUpon>Noticia.svc</DependentUpon>
     </Compile>
     <Content Include="WebServices\Comunidad\Entidad\Noticia.cs" />
-    <Compile Include="Comunidad\Noticia.aspx.cs">
-      <DependentUpon>Noticia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

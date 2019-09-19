@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/LayoutPrincipal.master" AutoEventWireup="true" CodeFile="Noticia.aspx.cs" Inherits="Comunidad_Noticia" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/LayoutPrincipal.master" AutoEventWireup="true" CodeBehind="Noticia.aspx.cs" Inherits="UPC.Consciencia.SiteWeb.Comunidad.Noticia" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="server">
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
 
     <div class="col-lg-12">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -11,7 +10,22 @@
         </div>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-12" id="DivNoticias" runat="server">
+
+        <div class="card shadow mb-4 border-left-info">
+            <a href="#IdCorrelativo" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">[[Titulo]]</h6>
+            </a>
+            <div class="collapse show" id="IdCorrelativo" style="">
+                <div class="card-body">
+                    [[Contenido]]
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <%--<div class="col-lg-12">
 
         <div class="card shadow mb-4 border-left-info">
             <!-- Card Header - Dropdown -->
@@ -56,5 +70,6 @@
         </div>
 
     </div>
+        --%>
 
 </asp:Content>

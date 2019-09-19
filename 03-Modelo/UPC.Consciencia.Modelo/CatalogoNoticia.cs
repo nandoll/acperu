@@ -19,7 +19,7 @@ namespace UPC.Consciencia.Modelo
 
         private Int32 m_IdNoticia;
         private String m_Medio;
-        private DateTime m_FechaHora;
+        private DateTime? m_FechaHora;
         private String m_Titulo;
         private String m_Contenido;
         private String m_SituacionRegistro;
@@ -65,7 +65,7 @@ namespace UPC.Consciencia.Modelo
         }
 
         [DataMember(Name = "FechaHora", Order = 2, IsRequired = true)]
-        public DateTime FechaHora
+        public DateTime? FechaHora
         {
             get { return m_FechaHora; }
             set { m_FechaHora = value; }
