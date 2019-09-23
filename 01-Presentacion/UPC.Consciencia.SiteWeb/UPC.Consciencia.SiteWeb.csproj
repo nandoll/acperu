@@ -150,6 +150,7 @@
     <Content Include="Educativo\EjecutarCaso.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Plantillas\Mailing\Bienvenida.html" />
     <Content Include="Plantillas\Mailing\ObjetivoConseguido.html" />
     <Content Include="questions.xml" />
     <Content Include="template.xml" />
