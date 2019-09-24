@@ -53,6 +53,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\UPC.Consciencia.SitioWeb\Utilitarios\Librerias\Framework.Infrastructure.File.dll</HintPath>
     </Reference>
+    <Reference Include="Framework.Infrastructure.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utilitarios\Librerias\Framework.Infrastructure.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utilitarios\Librerias\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -1963,6 +1971,9 @@
     <Content Include="Utilitarios\js\vendor\TweenMax.min.js" />
     <Content Include="Utilitarios\Librerias\Framework.DbAccess.Core.dll" />
     <Content Include="Utilitarios\Librerias\Framework.Infrastructure.File.dll" />
+    <Content Include="Utilitarios\Librerias\Framework.Infrastructure.Mail.dll" />
+    <Content Include="Utilitarios\Librerias\itextsharp.dll" />
+    <Content Include="Utilitarios\Librerias\itextsharp.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2114,6 +2125,7 @@
     <Content Include="WebServices\Comunidad\Servicio\Noticia.svc" />
     <Content Include="Utilitarios\css\fonts\alcubierre-webfont.woff" />
     <Content Include="Utilitarios\css\fonts\alcubierre-webfont.woff2" />
+    <Content Include="Utilitarios\Librerias\itextsharp.dll.refresh" />
     <None Include="Web.AppSettings.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2151,6 +2163,13 @@
     <Compile Include="Comunidad\Noticia.aspx.designer.cs">
       <DependentUpon>Noticia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Educativo\CategoriaCasos.aspx.cs">
       <DependentUpon>CategoriaCasos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2170,10 +2189,6 @@
       <DependentUpon>Noticia.svc</DependentUpon>
     </Compile>
     <Content Include="WebServices\Comunidad\Entidad\Noticia.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
