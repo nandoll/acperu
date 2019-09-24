@@ -46,7 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCatalogoBeneficio.cs" />
+    <Compile Include="AppCatalogoCategoria.cs" />
+    <Compile Include="AppCatalogoEscenario.cs" />
     <Compile Include="AppCatalogoNoticia.cs" />
+    <Compile Include="AppCatalogoPregunta.cs" />
+    <Compile Include="AppCatalogoRespuesta.cs" />
+    <Compile Include="AppCatalogoUsuario.cs" />
+    <Compile Include="AppCatalogoUsuarioBeneficio.cs" />
+    <Compile Include="AppEjecucionEscenario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

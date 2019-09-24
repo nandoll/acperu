@@ -42,7 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatalogoBeneficio.cs" />
+    <Compile Include="CatalogoCategoria.cs" />
+    <Compile Include="CatalogoEscenario.cs" />
     <Compile Include="CatalogoNoticia.cs" />
+    <Compile Include="CatalogoPregunta.cs" />
+    <Compile Include="CatalogoRespuesta.cs" />
+    <Compile Include="CatalogoUsuario.cs" />
+    <Compile Include="CatalogoUsuarioBeneficio.cs" />
+    <Compile Include="EjecucionEscenario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

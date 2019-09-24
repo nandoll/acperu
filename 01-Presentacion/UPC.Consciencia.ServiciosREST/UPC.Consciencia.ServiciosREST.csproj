@@ -22,6 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,10 +68,17 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Calificacion.svc" />
     <Content Include="Noticia.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calificacion.svc.cs">
+      <DependentUpon>Calificacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ICalificacion.cs" />
     <Compile Include="INoticia.cs" />
     <Compile Include="Noticia.svc.cs">
       <DependentUpon>Noticia.svc</DependentUpon>
