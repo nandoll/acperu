@@ -17,34 +17,34 @@ function initPreload(){
 	
 	loader = new createjs.LoadQueue(false);
 	manifest=[
-			{src:'assets/logo.png', id:'logo'},
-			{src:'assets/item_timer.png', id:'itemTimer'},
-			{src:'assets/item_question.png', id:'itemQuestion'},
-			{src:'assets/item_cup_over.png', id:'itemCupOver'},
-			{src:'assets/item_cup.png', id:'itemCup'},
-			{src:'assets/bg_pixel.png', id:'bgPixel'},
+			{src:'/Utilitarios/assets/logo.png', id:'logo'},
+            {src:'/Utilitarios/assets/item_timer.png', id:'itemTimer'},
+			{src:'/Utilitarios/assets/item_question.png', id:'itemQuestion'},
+			{src:'/Utilitarios/assets/item_cup_over.png', id:'itemCupOver'},
+			{src:'/Utilitarios/assets/item_cup.png', id:'itemCup'},
+			{src:'/Utilitarios/assets/bg_pixel.png', id:'bgPixel'},
 			
-			{src:'assets/button_facebook.png', id:'buttonFacebook'},
-			{src:'assets/button_twitter.png', id:'buttonTwitter'},
-			{src:'assets/button_google.png', id:'buttonGoogle'},
-			{src:'assets/button_fullscreen.png', id:'buttonFullscreen'},
-			{src:'assets/button_sound_on.png', id:'buttonSoundOn'},
-			{src:'assets/button_sound_off.png', id:'buttonSoundOff'},
-			{src:'assets/button_replay.png', id:'buttonReplay'},
-			{src:'assets/button_start.png', id:'buttonStart'},
-			{src:'assets/button_submit.png', id:'buttonSubmit'},
-			{src:'assets/button_prev.png', id:'buttonPrev'},
-			{src:'assets/button_preview.png', id:'buttonPreview'},
-			{src:'assets/button_replay.png', id:'buttonReplay'},
-			{src:'assets/button_save.png', id:'buttonSave'},
-			{src:'assets/button_score.png', id:'buttonScore'},
-			{src:'assets/button_ok.png', id:'buttonOk'},
-			{src:'assets/button_next.png', id:'buttonNext'},
-			{src:'assets/button_exit.png', id:'buttonExit'},
-			{src:'assets/button_cancel.png', id:'buttonCancel'},
-			{src:'assets/button_back.png', id:'buttonBack'},
-			{src:'assets/button_option.png', id:'buttonOption'},
-			{src:'assets/button_option_close.png', id:'buttonOptionClose'}];
+			{src:'/Utilitarios/assets/button_facebook.png', id:'buttonFacebook'},
+			{src:'/Utilitarios/assets/button_twitter.png', id:'buttonTwitter'},
+			{src:'/Utilitarios/assets/button_google.png', id:'buttonGoogle'},
+			{src:'/Utilitarios/assets/button_fullscreen.png', id:'buttonFullscreen'},
+			{src:'/Utilitarios/assets/button_sound_on.png', id:'buttonSoundOn'},
+			{src:'/Utilitarios/assets/button_sound_off.png', id:'buttonSoundOff'},
+			{src:'/Utilitarios/assets/button_replay.png', id:'buttonReplay'},
+			{src:'/Utilitarios/assets/button_start.png', id:'buttonStart'},
+			{src:'/Utilitarios/assets/button_submit.png', id:'buttonSubmit'},
+			{src:'/Utilitarios/assets/button_prev.png', id:'buttonPrev'},
+			{src:'/Utilitarios/assets/button_preview.png', id:'buttonPreview'},
+			{src:'/Utilitarios/assets/button_replay.png', id:'buttonReplay'},
+			{src:'/Utilitarios/assets/button_save.png', id:'buttonSave'},
+			{src:'/Utilitarios/assets/button_score.png', id:'buttonScore'},
+			{src:'/Utilitarios/assets/button_ok.png', id:'buttonOk'},
+			{src:'/Utilitarios/assets/button_next.png', id:'buttonNext'},
+			{src:'/Utilitarios/assets/button_exit.png', id:'buttonExit'},
+			{src:'/Utilitarios/assets/button_cancel.png', id:'buttonCancel'},
+			{src:'/Utilitarios/assets/button_back.png', id:'buttonBack'},
+			{src:'/Utilitarios/assets/button_option.png', id:'buttonOption'},
+			{src:'/Utilitarios/assets/button_option_close.png', id:'buttonOptionClose'}];
 	
 	soundOn = true;		
 	if($.browser.mobile || isTablet){
@@ -54,12 +54,12 @@ function initPreload(){
 	}
 	
 	if(soundOn){
-		manifest.push({src:'assets/sounds/selectAnswer.ogg', id:'soundSelectAnswer'});
-		manifest.push({src:'assets/sounds/selectWrong.ogg', id:'soundSelectWrong'});
-		manifest.push({src:'assets/sounds/answerCorrect.ogg', id:'soundAnswerCorrect'});
-		manifest.push({src:'assets/sounds/answerWrong.ogg', id:'soundAnswerWrong'});
-		manifest.push({src:'assets/sounds/click.ogg', id:'soundClick'});
-		manifest.push({src:'assets/sounds/result.ogg', id:'soundResult'});
+		manifest.push({src:'/Utilitarios/assets/sounds/selectAnswer.ogg', id:'soundSelectAnswer'});
+		manifest.push({src:'/Utilitarios/assets/sounds/selectWrong.ogg', id:'soundSelectWrong'});
+		manifest.push({src:'/Utilitarios/assets/sounds/answerCorrect.ogg', id:'soundAnswerCorrect'});
+		manifest.push({src:'/Utilitarios/assets/sounds/answerWrong.ogg', id:'soundAnswerWrong'});
+		manifest.push({src:'/Utilitarios/assets/sounds/click.ogg', id:'soundClick'});
+		manifest.push({src:'/Utilitarios/assets/sounds/result.ogg', id:'soundResult'});
 		
 		createjs.Sound.alternateExtensions = ["mp3"];
 		loader.installPlugin(createjs.Sound);
