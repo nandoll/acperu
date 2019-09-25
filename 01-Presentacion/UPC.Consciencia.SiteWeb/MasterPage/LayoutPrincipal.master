@@ -17,7 +17,11 @@
 
     <link href="../Utilitarios/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="../Utilitarios/css/plantilla/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="../Utilitarios/css/app.min.css" rel="stylesheet">
 
     <script>
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -32,10 +36,10 @@
         }
         </script>
         
-        <link rel="stylesheet" href="../Utilitarios/css/normalize.css">
+        
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
-        <link rel="stylesheet" href="../Utilitarios/css/main.css">
-        <script src="../Utilitarios/js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        
 
     <asp:ContentPlaceHolder ID="ContentHeader" runat="server">
     </asp:ContentPlaceHolder>
@@ -48,7 +52,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../Default.aspx">
@@ -92,7 +96,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <%--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Resultados</span>
@@ -106,7 +110,7 @@
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
-            </li>
+            </li>--%>
 
             <!-- Divider -->
             <hr class="sidebar-divider" />
@@ -117,7 +121,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <%--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Publicaciones</span>
@@ -141,7 +145,7 @@
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Videos</span></a>
-            </li>
+            </li>--%>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -162,13 +166,13 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column background-main">
 
             <!-- Main Content -->
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white trans-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -337,9 +341,9 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid px-0">
 
-                    <div class="row">
+                    <div class="row no-gutters">
                         <form id="frmLayoutPrincipal" runat="server" class="col-sm-12">
                             <div class="col-sm-12">
                                 <asp:ContentPlaceHolder ID="ContentBody" runat="server">
@@ -355,10 +359,10 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white trans-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UPC - ACPERÚ 2019</span>
+                        <span class="text-white">Copyright &copy; @Carhuanchos - ACPERÚ 2019</span>
                     </div>
                 </div>
             </footer>
@@ -400,17 +404,31 @@
     <script src="../Utilitarios/js/plantilla/sb-admin-2.min.js"></script>
     <script src="../Utilitarios/chart.js/Chart.min.js"></script>
 
-    <script src="../Utilitarios/js/vendor/detectmobilebrowser.js"></script>
-    <script src="../Utilitarios/js/vendor/createjs-2015.11.26.min.js"></script>
-	<script src="../Utilitarios/js/vendor/TweenMax.min.js"></script>
+    <!-- Carrusel -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="../Utilitarios/js/plugins.js"></script>
-    <script src="../Utilitarios/js/sound.js"></script>
-    <script src="../Utilitarios/js/score.js"></script>
-    <script src="../Utilitarios/js/game.js"></script>
-    <script src="../Utilitarios/js/main.js"></script>
-    <script src="../Utilitarios/js/loader.js"></script>
-    <script src="../Utilitarios/js/init.js"></script>
+    <!-- build:js -->
+    <%--<script src="assets/js/app.js"></script>--%>
+    <!-- endbuild -->
+
+    <script>
+
+        $(document).ready(function () {
+            if ($('.carruselOfSections').length > 0) {
+                $('.carruselOfSections').slick({
+                    mobileFirst: false,
+                    swipe: false,
+                    nextArrow: $('.next'),
+                    prevArrow: $('.prev'),
+                    infinite: false
+                });
+                $('.carruselOfQuestions').slick({
+                    arrows: false
+                }); 
+            }
+                       
+        });
+    </script>
 
 </body>
 
