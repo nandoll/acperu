@@ -34,6 +34,41 @@ namespace UPC.Consciencia.Datos
         }
 
         /// <summary>
+        /// Inserta o actualiza un registro de la tabla.
+        /// </summary>
+        /// <param name="ent">Entidad que representa la tabla. </param>
+        /// <returns>Valor de exito.</returns>
+        /// <remarks></remarks>
+        public Int32 GrabarCatalogoUsuario(ENT.CatalogoUsuario ent)
+        {
+            DbParameter[] dbPar = new DbParameter[12];
+            dbPar[0] = base.NewParameter("pIdUsuario", DbType.Int32, 10, ent.IdUsuario);
+            dbPar[0].Direction = ParameterDirection.InputOutput;
+            dbPar[1] = base.NewParameter("pNombres", DbType.String, 200, ent.Nombres);
+            dbPar[2] = base.NewParameter("pApellidos", DbType.String, 200, ent.Apellidos);
+            dbPar[3] = base.NewParameter("pCorreo", DbType.String, 200, ent.Correo);
+            dbPar[4] = base.NewParameter("pClave", DbType.String, 2000, ent.Clave);
+            dbPar[5] = base.NewParameter("pPerfil", DbType.Int32, 10, ent.Perfil);
+            dbPar[6] = base.NewParameter("pSituacionRegistro", DbType.String, 1, ent.SituacionRegistro);
+            dbPar[7] = base.NewParameter("pUsuarioRegistro", DbType.String, 9, ent.UsuarioRegistro);
+            dbPar[8] = base.NewParameter("pFechaRegistro", DbType.DateTime, 20, ent.FechaRegistro);
+            dbPar[9] = base.NewParameter("pUsuarioCambio", DbType.String, 9, ent.UsuarioCambio);
+            dbPar[10] = base.NewParameter("pFechaCambio", DbType.DateTime, 20, ent.FechaCambio);
+            dbPar[11] = base.NewParameter("pIdBeneficio", DbType.Int32, 10, ent.IdBeneficio);
+
+            Boolean bolCorrecto = false;
+            Int32 intIdUsuario = 0;
+
+            bolCorrecto = base.ExecuteProcedure("uspCatalogoUsuarioGrb", dbPar);
+
+            if (bolCorrecto) {
+                Int32.TryParse(dbPar[0].Value.ToString(), out intIdUsuario);
+            }
+
+            return intIdUsuario;
+        }
+
+        /// <summary>
         /// Inserta un nuevo registro a la tabla.
         /// </summary>
         /// <param name="ent">Entidad que representa la tabla. </param>

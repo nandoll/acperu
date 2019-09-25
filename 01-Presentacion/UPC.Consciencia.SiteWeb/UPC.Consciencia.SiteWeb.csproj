@@ -2184,6 +2184,7 @@
     <Compile Include="Educativo\EjecutarCaso.aspx.designer.cs">
       <DependentUpon>EjecutarCaso.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Json.cs" />
     <Compile Include="WebServices\Comunidad\Servicio\INoticia.cs" />
     <Compile Include="WebServices\Comunidad\Servicio\Noticia.svc.cs">
       <DependentUpon>Noticia.svc</DependentUpon>

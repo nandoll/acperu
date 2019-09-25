@@ -52,7 +52,7 @@
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
                                         </div>--%>
-                                        <a href="../Default.aspx" class="btn btn-primary btn-user btn-block">Ingresar</a>
+                                        <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary btn-user btn-block" OnClick="btnIngresar_Click" />
                                         <hr />
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i>Ingresar con Google</a>

@@ -39,6 +39,19 @@ namespace UPC.Consciencia.Logica
             return obj.ListarCatalogoUsuarioPorId(intIdUsuario).DefaultView;
         }
 
+
+        /// <summary>
+        /// Inserta o actualiza un nuevo registro a la tabla.
+        /// </summary>
+        /// <param name="ent">Entidad que representa la tabla. </param>
+        /// <returns>Valor de exito.</returns>
+        /// <remarks></remarks>
+        public Int32 GrabarCatalogoUsuario(ENT.CatalogoUsuario ent)
+        {
+            DA.CatalogoUsuario obj = new DA.CatalogoUsuario(base.Conexion);
+            return obj.GrabarCatalogoUsuario(ent);
+        }
+
         /// <summary>
         /// Inserta un nuevo registro a la tabla.
         /// </summary>

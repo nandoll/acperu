@@ -21,9 +21,10 @@ namespace UPC.Consciencia.Modelo
         private Int32 m_Perfil;
         private String m_SituacionRegistro;
         private String m_UsuarioRegistro;
-        private DateTime m_FechaRegistro;
+        private DateTime? m_FechaRegistro;
         private String m_UsuarioCambio;
-        private DateTime m_FechaCambio;
+        private DateTime? m_FechaCambio;
+        private Int32 m_IdBeneficio;
 
         #endregion
 
@@ -96,7 +97,7 @@ namespace UPC.Consciencia.Modelo
             set { m_UsuarioRegistro = value; }
         }
 
-        public DateTime FechaRegistro
+        public DateTime? FechaRegistro
         {
             get { return m_FechaRegistro; }
             set { m_FechaRegistro = value; }
@@ -108,12 +109,18 @@ namespace UPC.Consciencia.Modelo
             set { m_UsuarioCambio = value; }
         }
 
-        public DateTime FechaCambio
+        public DateTime? FechaCambio
         {
             get { return m_FechaCambio; }
             set { m_FechaCambio = value; }
         }
 
+        public Int32 IdBeneficio
+        {
+            get { return m_IdBeneficio; }
+            set { m_IdBeneficio = value; }
+        }
+        
         #endregion
 
     }

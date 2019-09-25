@@ -13,5 +13,21 @@ namespace UPC.Consciencia.SiteWeb.Account
         {
 
         }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            ValidarIngreso();
+        }
+
+        private void ValidarIngreso()
+        {
+
+            Session["IdUsuario"] = 1;
+            Session["Nombre"] = "Carhuancho";
+            Session["Correo"] = "acperu.noreply@gmail.com";
+
+            Response.Redirect("~/Default.aspx");
+
+        }
     }
 }
