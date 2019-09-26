@@ -72,7 +72,7 @@
                                 <a href="../Default.aspx" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i>Registrar con Facebook</a>
                             
-    <div id="DivBienvenida" runat="server">
+    <div id="DivBienvenida" runat="server" style="display: none;">
         <div style="-moz-box-sizing: border-box; -ms-text-size-adjust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%; margin: 0; background: #fff!important; box-sizing: border-box; color: #0a0a0a; font-family: Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 400; line-height: 1; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100%!important">
             <span class="preheader" style="color: #fff; display: none!important; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all!important; opacity: 0; overflow: hidden; visibility: hidden"></span>
             <table class="body" style="margin: 0; background: #fff!important; border-collapse: collapse; border-spacing: 0; color: #0a0a0a; font-family: Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 400; height: 100%; line-height: 1; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">

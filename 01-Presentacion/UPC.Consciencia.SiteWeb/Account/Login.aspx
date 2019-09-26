@@ -41,7 +41,7 @@
                                     </div>
                                     <form id="frmLogin" runat="server" class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo electrónico" />
+                                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-user" aria-describedby="emailHelp" placeholder="Correo electrónico"  />
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contraseña" />

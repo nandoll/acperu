@@ -24,7 +24,7 @@ namespace UPC.Consciencia.SiteWeb.Account
 
             Session["IdUsuario"] = 1;
             Session["Nombre"] = "Carhuancho";
-            Session["Correo"] = "acperu.noreply@gmail.com";
+            Session["Correo"] = txtEmail.Text.Trim();
 
             Response.Redirect("~/Default.aspx");
 
