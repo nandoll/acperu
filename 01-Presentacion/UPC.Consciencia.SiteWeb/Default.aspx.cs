@@ -18,9 +18,9 @@ namespace UPC.Consciencia.SiteWeb
             if (!Page.IsPostBack)
             {
                 //EnviarCorreoBienvenida("Jorge", "acperu.noreply@gmail.com");
-                if (Session["Nombre"] != null) {
-                    EnviarCorreoCumplimiento(Session["Nombre"].ToString(), Session["Correo"].ToString());
-                }
+                //if (Session["Nombre"] != null) {
+                //    EnviarCorreoCumplimiento(Session["Nombre"].ToString(), Session["Correo"].ToString());
+                //}
                 
             }
         }
